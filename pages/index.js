@@ -1,8 +1,8 @@
 const Home = () => {
   return (
     <>
-      <h1>Mozinho</h1>
-      <p>Esse aqui é o primeiro desafio do curso. Te amo, beijos.</p>
+      <h1>Clone do Tab News</h1>
+      <p>Página em construção! Finalização da Milestone-0.</p>
     </>
   );
 };
