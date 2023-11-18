@@ -4,9 +4,9 @@
   "description": "Clone do https://www.tabnews.com.br/",
   "main": "index.js",
   "scripts": {
-    "database:up": "docker compose -f ./infra/compose.yaml up -d",
-    "database:down": "docker compose -f ./infra/compose.yaml down",
-    "dev": "next dev",
+    "infra:up": "docker compose -f ./infra/compose.yaml up -d",
+    "infra:down": "docker compose -f ./infra/compose.yaml down",
+    "dev": "npm run infra:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
