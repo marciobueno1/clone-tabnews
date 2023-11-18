@@ -1,10 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/infra/*": ["infra/*"],
-      "@/models/*": ["models/*"],
-      "@/pages/*": ["pages/*"]
-    }
+    "baseUrl": "."
   }
 }
