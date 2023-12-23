@@ -27,7 +27,7 @@ const status = async (request, response) => {
       database: {
         version: databaseVersionValue,
         max_connections: databaseMaxConnectionsValue,
-        active_connections: databaseOpenedConnectionsValue,
+        opened_connections: databaseOpenedConnectionsValue,
       },
     },
   });
