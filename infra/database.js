@@ -7,10 +7,9 @@ const query = async (queryObject) => {
     user: process.env.POSTGRES_USER,
     database: process.env.POSTGRES_DB,
     password: process.env.POSTGRES_PASSWORD,
-    ssl: process.env.NODE_ENV === "development" ? false : true,
+    ssl: getSslOption(),
   };
   const client = new Client(postgresCredentials);
-  console.log("Credenciais do Postgres:", postgresCredentials);
 
   try {
     await client.connect();
@@ -26,4 +25,14 @@ const query = async (queryObject) => {
 
 export default {
   query: query,
+};
+
+const getSslOption = () => {
+  if (process.env.POSTGRES_CA) {
+    return {
+      ca: process.env.POSTGRES_CA,
+    };
+  }
+
+  return process.env.NODE_ENV === "development" ? false : true;
 };
